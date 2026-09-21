@@ -81,13 +81,6 @@ erDiagram
         created_at timestamp
     }
 
-    saved_communities {
-        id int
-        account_id int
-        community_id int
-        created_at timestamp
-    }
-
     event_categories {
         id int
         event_id int
@@ -140,8 +133,6 @@ erDiagram
 
     accounts ||--o{ community_members : "joins"
     communities ||--o{ community_members : "has members"
-    accounts ||--o{ saved_communities : "saves"
-    communities ||--o{ saved_communities : "saved by"
 
     events ||--o{ event_categories : "tagged"
     categories ||--o{ event_categories : "classifies"
