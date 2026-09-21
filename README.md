@@ -13,7 +13,8 @@ erDiagram
         location varchar(150)
         position varchar(150)
         password varchar(255)
-        role role_type
+        role enum
+        status enum
         image_url varchar(255)
         created_at timestamp
         updated_at timestamp
@@ -24,6 +25,7 @@ erDiagram
         name varchar(150)
         description text
         image_url varchar(500)
+        is_active boolean
         created_at timestamp
         updated_at timestamp
     }
@@ -44,10 +46,10 @@ erDiagram
         image_url varchar(500)
         start_at timestamptz
         end_at timestamptz
-        format event_format
+        format enum
         location varchar(500)
         capacity int
-        status event_status
+        status enum
         speakers jsonb
         created_at timestamp
         updated_at timestamp
