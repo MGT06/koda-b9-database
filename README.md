@@ -16,8 +16,8 @@ erDiagram
         role enum
         status enum
         image_url varchar(255)
-        created_at timestamp
-        updated_at timestamp
+        created_at timestamptz 
+        updated_at timestamptz 
     }
 
     communities {
@@ -26,15 +26,14 @@ erDiagram
         description text
         image_url varchar(500)
         is_active boolean
-        created_at timestamp
-        updated_at timestamp
+        created_at timestamptz 
+        updated_at timestamptz 
     }
 
     categories {
         id int
         name varchar(100)
-        created_at timestamp
-        updated_at timestamp
+        created_at timestamptz 
     }
 
     events {
@@ -49,48 +48,42 @@ erDiagram
         format enum
         location varchar(500)
         capacity int
-        status enum
         speakers jsonb
-        created_at timestamp
-        updated_at timestamp
+        created_at timestamptz 
+        updated_at timestamptz
     }
 
     testimony {
         id int
         account_id int
         message text
-        created_at timestamp
+        created_at timestamptz 
     }
 
     join_event {
-        id int
         account_id int
         event_id int
-        created_at timestamp
+        created_at timestamptz 
     }
 
     saved_events {
-        id int
         account_id int
         event_id int
-        created_at timestamp
+        created_at timestamptz 
     }
 
     community_members {
-        id int
         account_id int
         community_id int
-        created_at timestamp
+        created_at timestamptz 
     }
 
     event_categories {
-        id int
         event_id int
         category_id int
     }
 
     community_categories {
-        id int
         community_id int
         category_id int
     }
@@ -101,8 +94,8 @@ erDiagram
         account_id int
         parent_id int
         message text
-        created_at timestamp
-        updated_at timestamp
+        created_at timestamptz 
+        updated_at timestamptz 
     }
 
     community_discussions {
@@ -111,8 +104,8 @@ erDiagram
         account_id int
         parent_id int
         message text
-        created_at timestamp
-        updated_at timestamp
+        created_at timestamptz 
+        updated_at timestamptz 
     }
 
     notifications {
@@ -120,9 +113,10 @@ erDiagram
         account_id int
         title varchar(200)
         message text
-        is_read boolean
-        created_at timestamp
-        updated_at timestamp
+        type enum
+        created_at timestamptz 
+        read_at timestamptz 
+        updated_at timestamptz 
     }
 
     accounts ||--o{ events : "organizes"
