@@ -1,6 +1,9 @@
 
 DBDIAGRAM : https://dbdiagram.io/d/6aafe374943b561dd49397db
 
+<img width="1326" height="1808" alt="ERD-Event-Hub" src="https://github.com/user-attachments/assets/7d3a6063-0563-4416-9c0b-89df68c5522f" />
+
+
 Eventhub ERD
 ---
 ```mermaid
